@@ -1,0 +1,65 @@
+.accordion{
+  width:200px;
+  padding:0;
+  color:#fff;
+  background-color:#FF8C65;
+  margin:0 auto;
+  box-shadow: 0 2px 2px rgba(0,0,0,.22);
+  border-radius:5px;
+  z-index:1;
+}
+.accordion label{
+  display:block;
+  margin:0;
+  line-height: 50px;
+  font-size:1.1em;
+  font-weight:900;
+}
+.accordion label:before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  color: #fff;
+  font-weight: 900;
+  padding-right:7px;
+  padding-left:10px;
+  text-shadow: initial;
+}
+.accordion input{
+  position:absolute;
+  left:-9999em;/*画面外へ*/
+}
+.accordion .menu{
+  display:none;/*非表示に*/
+}
+.accordion input:checked ~ .menu{
+  display:block;
+  animation:slide 0.7s ease-in-out 0s;
+}
+
+.menu{
+  padding:0;
+  background-color:#fbfbfb;
+  text-align:center;
+}
+.menu a{
+  display:block;
+  text-decoration: none;
+  line-height: 40px;
+  color:#FF8C65;
+  width:100%;
+}
+.accordion label:hover{
+  opacity:.7;
+}
+.menu a:hover{
+  background-color:#fcd69e;
+}
+
+@keyframes slide{
+  0%{
+    max-height:0;
+  }
+  100%{
+    max-height:20vh;
+  }
+}

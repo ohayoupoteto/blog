@@ -1,0 +1,27 @@
+
+.alert-box{
+    position: absolute;
+    top:0;
+    width:100%;
+    height:90px;
+    background-color:rgb(245, 154, 124);
+    display:none;
+    text-align:center;
+    padding-top:0px;
+    color:#fff;
+}
+.alert{
+    margin-bottom:5px;
+    font-size:.9em;
+}
+.button_open{
+    position: absolute;
+    top:30%;
+    left:50%;
+    transform : translate(-50%,-50%);
+}
+.button_close{
+    opacity: .5;
+    font-size: .7em;
+}
+

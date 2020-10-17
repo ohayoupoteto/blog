@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <ul class="accordion">
+        <li>
+            <div class="meat">鶏</div>
+            <ul class="menu">
+                <li>
+                    <a href="#">唐揚げ</a>
+                </li>
+                <li>
+                    <a href="#">竜田揚げ</a>
+                </li>
+                <li>
+                    <a href="#">フライドチキン</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="meat">牛</div>
+            <ul class="menu">
+                <li>
+                    <a href="#">牛タン</a>
+                </li>
+                <li>
+                    <a href="#">カルビステーキ</a>
+                </li>
+                <li>
+                    <a href="#">サイコロステーキ</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="meat">豚</div>
+            <ul class="menu">
+                <li>
+                    <a href="#">生姜焼き</a>
+                </li>
+                <li>
+                    <a href="#">酢豚</a>
+                </li>
+                <li>
+                    <a href="#">豚トロ</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="meat">鮫</div>
+            <ul class="menu">
+                <li>
+                    <a href="#">フカヒレスープ</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $(".menu").hide();
+            $(".meat").mouseover(function () {
+                $(".menu").slideUp();
+                if ($("+ul", this).css("display") == "none") {
+                    $("+ul", this).slideDown();
+                }
+            });
+            $(".meat").mouseover(function () {
+                $(this).addClass("hover");
+            }).mouseout(function () {
+                $(this).removeClass("hover")
+            });
+        });
+    </script>
+</body>
+
+</html>

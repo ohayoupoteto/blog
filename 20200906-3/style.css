@@ -1,0 +1,8 @@
+.slideParent{
+    overflow: hidden;
+    max-width:500px;
+}
+.slide{
+    float: left;
+    display: block;
+}

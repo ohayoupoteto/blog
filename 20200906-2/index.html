@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+    <ul class="parent">
+        <li>
+            <a href="#">和食</a>
+            <ul class="children">
+                <li><a href="#">すき焼き</a>
+                    <ul class="children">
+                            <li><a href="#">すき焼き</a></li>
+                            <li><a href="#">天ぷら</a></li>
+                            <li><a href="#">寿司</a></li>
+                        </ul></li>
+                <li><a href="#">天ぷら</a>
+                    <ul class="children">
+                            <li><a href="#">すき焼き</a></li>
+                            <li><a href="#">天ぷら</a></li>
+                            <li><a href="#">寿司</a></li>
+                        </ul></li>
+                <li><a href="#">寿司</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">洋食</a>
+            <ul class="children">
+                    <li><a href="#">ハンバーグ</a></li>
+                    <li><a href="#">ピラフ</a></li>
+                    <li><a href="#">パスタ</a></li>
+                </ul>
+        </li>
+        <li>
+            <a href="#">中華料理</a>
+            <ul class="children">
+                    <li><a href="#">ラーメン</a></li>
+                    <li><a href="#">炒飯</a></li>
+                    <li><a href="#">餃子</a></li>
+                </ul>
+        </li>
+    </ul>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function(){
+        $(".parent li").hover(function(){
+            $(">ul:not(:animated)",this).slideDown();
+        },
+        function(){
+            $("ul",this).slideUp();
+        })
+        });
+    </script>
+</body>
+</html>

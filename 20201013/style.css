@@ -1,0 +1,61 @@
+.field{
+  position:relative;
+}
+.kurumi{
+  max-width:10%;
+  animation: kurumi_move 2s linear 0s infinite;
+  margin-left:0;
+}
+.kurumi2{/*目指すやつ*/
+  max-width:10%;
+  animation: kurumi_move2 3s linear 0s infinite;
+  position:absolute;
+  margin-left:0;
+}
+.kurumi3{
+  max-width:10%;
+  animation: kurumi_move 2s linear 1s infinite;
+  position:absolute;
+  margin-left:0;
+}
+
+@keyframes kurumi_move{
+ 20%{
+    transform:scale(1.1,0.9) translateY(40px);
+  }
+  40%{
+    transform:scale(1.0,1.0) translateY(0px);
+  }
+  60%{
+    transform:scale(1.1,0.9) translateY(40px);
+  }
+  80%{
+    transform:scale(1.0,1.0) translateY(0px);
+  }
+  100%{
+    transform:scale(1.1,0.9) translateY(40px);
+    margin-left:70%;
+  }
+}
+@keyframes kurumi_move2{
+  33%{
+    transform:scale(1.0,1.0) translateY(0px);
+    left:0;
+  }
+  46%{
+    transform:scale(1.1,0.9) translateY(40px);
+  }
+  59%{
+    transform:scale(1.0,1.0) translateY(0px);
+  }
+  72%{
+    transform:scale(1.1,0.9) translateY(40px);
+  }
+  85%{
+    transform:scale(1.0,1.0) translateY(0px);
+  }
+  100%{
+    transform:scale(1.1,0.9) translateY(40px);
+    margin-left:70%;
+  }
+}

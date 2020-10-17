@@ -1,0 +1,39 @@
+.accordion{
+    width:200px;
+    padding:0;
+    color:#fff;
+    background-color:#FF8C65;
+}
+.accordion,.menu{
+    margin:0;
+    list-style: none;
+}
+.meat{
+    line-height: 50px;
+    font-size:1.1em;
+    text-shadow: 2px 4px 3px rgba(0,0,0,.1);
+    border-bottom:7px solid #fafafa;
+}
+.meat:before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    color: #fff;
+    font-weight: 900;
+    padding-right:7px;
+    padding-left:10px;
+    text-shadow: initial;
+}
+.menu{
+    padding-top:5px;
+    background-color:#fbfbfb;
+   
+}
+.menu a{
+    display:block;
+    text-decoration: none;
+    line-height: 40px;
+    color:#888;
+}
+.hover{
+    background-color:#fcd69e;
+}
