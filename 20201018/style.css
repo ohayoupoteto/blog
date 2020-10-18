@@ -1,0 +1,22 @@
+.background{
+  position:relative;
+  margin:0 auto;
+  height:50vh;
+  width:70%;
+  background-image:url(bagel-sandwich-min.jpg);
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+.background:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  height:50vh;
+  width:70%;
+  background-image:url(bagel-sandwich-min.jpg);
+  background-size:contain;
+  background-repeat:no-repeat;
+  z-index:1;
+  filter:blur(10px);
+}
