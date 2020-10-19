@@ -4,7 +4,7 @@ let foods = [
         name: "唐揚げ",
         meat: "鶏肉",
         price: 700,
-        quantity: 3
+        quantity: 1
     },
     {
         name: "竜田揚げ",
@@ -45,6 +45,12 @@ let vm = new Vue({
         },
         canBuy: function () {
             return this.totalPrice >= 1000;
+        },
+        errorMessageStyle: function () {
+            return {
+                border: this.canBuy ? "" : "solid 1px #ff0000",
+                color: this.canBuy ? "" : "#ff0000"
+            }
         }
     }
 });
