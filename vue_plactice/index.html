@@ -14,10 +14,16 @@
 
 <body>
     <div id="app">
+        <ul>
+            <li v-for="food in foods" v-bind:key="food.name">
+                {{food.name}}の個数：
+                <input type="number" v-model="food.quantity" min="0">
+            </li>
+        </ul>
         <div :style="errorMessageStyle">
             <ul>
                 <li v-for="food in foods" v-bind:key="food.name">
-                    {{food.name}}：{{food.price}} × {{food.quantity}} = {{food.price*food.quantity | numberWithDelimiter}}円
+                    {{food.name}}：{{food.price}} × {{food.quantity}} = {{food.price*food.quantity | numberWIthDelimiter}}円
                 </li>
             </ul>
             <p>
