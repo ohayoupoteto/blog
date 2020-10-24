@@ -31,8 +31,16 @@ let vm = new Vue({
                 return "0"
             }
             return value.toString().replace(/(\d)(?=(\d{3})+$)/g, "$1,")
-        },
+        }
 
+    },
+    methods: {
+        doBuy: function () {
+            alert(this.totalPriceWithTax + "円お買い上げ!");
+            this.foods.forEach(function (food) {
+                food.quantity = 0;
+            });
+        }
     },
     computed: {
         totalPrice: function () {
@@ -54,4 +62,11 @@ let vm = new Vue({
         }
     }
 });
+
+Vue.component("list-item", {
+    template: "<ul><li>foo</li></ul>"
+});
+new Vue({
+    el: ".app2"
+})
 
