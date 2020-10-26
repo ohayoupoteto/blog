@@ -1,22 +1,22 @@
 .marker{
-  margin-top:100em;
+  margin-top:15em;
   margin-bottom:10em;
+  text-align:center;
+  font-size:2em;
 }
 .marker-move{
   background-image: linear-gradient(
-    90deg,rgb(252, 214, 158) 80%,transparent /*好きな色*/
+    90deg,rgb(252, 214, 158) 90%,transparent /*好きな色*/
   );
   background-repeat:no-repeat;
-  background-size:200% 30%;/*2つ目の値でマーカーの太さを変える*/
+  background-size:200% 40%;/*2つ目の値でマーカーの太さを変える*/
   background-position:0% bottom;
-  /*background-position:right -100% bottom;*/ /*rightから-100%*/
   animation: marker 3s ease 0s;/*マーカーを引く速度*/
-  font-size:3em;
 }
 
 @keyframes marker{
   0%{
-    background-position:200% bottom;
+    background-position:right -100% bottom;
   }
   100%{
     background-position:0% bottom;
