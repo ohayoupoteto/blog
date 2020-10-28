@@ -6,7 +6,7 @@
 }
 .marker-move{
   background-image: linear-gradient(
-    90deg,rgb(252, 214, 158) 90%,transparent /*好きな色*/
+    90deg,rgb(252, 214, 158) 100%,transparent /*好きな色*/
   );
   background-repeat:no-repeat;
   background-size:200% 40%;/*2つ目の値でマーカーの太さを変える*/
