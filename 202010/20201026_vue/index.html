@@ -17,6 +17,7 @@
     <div id="app">
         <router-link to="/top">トップページへ</router-link>
         <router-link to="/users">ユーザー一覧へ</router-link>
+        <router-link to="/users/new">新規追加</router-link>
         <router-view></router-view>
     </div>
 
@@ -25,12 +26,44 @@
         <div class="loading" v-if="loading"読み込み中...></div>
         <div class="error" v-if="error">{{error}}</div>
         <div v-for="user in users" :key="user.id">
-            <h2>{{user.name}}</h2>
+            <router-link :to="{path:'/users/'+user.id}">
+                {{user.name}}
+            </router-link>
         </div>
     </div>
     </script>
+    <script type="text/x-template" id="user-detail">
+        <div>
+            <div class=" loading " v-if="loading "読み込み中...></div>
+            <div class="error" v-if="error">{{error}}</div>
+            <div v-if="user">
+                <h2>{{user.name}}</h2>
+                <p>{{user.description}}</p>
+            </div>
+        </div>
+        </script>
+    <script type="text/x-template" id="user-create">
+        <div>
+            <div class="sending" v-if="sending">Sending...</div>
+            <div>
+                <h2>新規ユーザー作成</h2>
+                <div>
+                    <label>名前：</label>
+                    <input type="text" v-model="user.name">
+                </div>
+                <div>
+                    <label>ユーザー詳細：</label>
+                    <textarea v-model="user.description"></textarea>
+                </div>
+                <div v-if="error" class="error">{{error}}</div>
+                <div>
+                    <input type="button" @click="createUser" value="送信">
+                </div>
+            </div>
+        </div>
+    </script>
 
-    <script src="script.js"></script>
+    <script src="script.js "></script>
 </body>
 
 </html>
