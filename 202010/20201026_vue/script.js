@@ -1,4 +1,4 @@
-const userData = [
+let userData = [
     {
         id: 1,
         name: "ゆんゆん",
@@ -13,16 +13,7 @@ const userData = [
 
 const getUsers = function (callback) {
     setTimeout(function () {
-        callback(null, [
-            {
-                id: 1,
-                name: "ゆんゆん",
-            },
-            {
-                id: 2,
-                name: "六花ちゃん",
-            }
-        ]);
+        callback(null, userData);
     }, 100);
 };
 const getUser = function (userId, callback) {
@@ -41,6 +32,26 @@ const postUser = function (params, callback) {
     }, 1000);
 };
 
+//認証用のモジュール
+const Auth = {
+    login: function (email, pass, cb) {
+        setTimeout(function () {
+            if (email === "vue@example.com" && pass === "vue") {
+                localStorage.token = Math.random().toString(36).substring(7);
+                if (cb) { cb(true); }
+            }
+            else {
+                if (cb) { cb(false) }
+            }
+        }, 0);
+    },
+    logout: function () {
+        delete localStorage.token;
+    },
+    loggedIn: function () {
+        return !!localStorage.token;
+    }
+};
 
 //ユーザー一覧のコンポーネント
 const UserList = {
@@ -153,6 +164,29 @@ const UserCreate = {
     }
 }
 
+const Login = {
+    template: "#login",
+    data: function () {
+        return {
+            email: "vue@example.com",
+            pass: "",
+            error: false
+        };
+    },
+    methods: {
+        login: function () {
+            Auth.login(this.email, this.pass, (function (loggedIn) {
+                if (!loggedIn) {
+                    this.error = true;
+                }
+                else {
+                    this.$router.replace(this.$route.query.redirect || "/");
+                }
+            }).bind(this))
+        }
+    }
+};
+
 //ルーティング
 const router = new VueRouter({
     routes: [
@@ -168,11 +202,33 @@ const router = new VueRouter({
         },
         {
             path: "/users/new",
-            component: UserCreate
+            component: UserCreate,
+            beforeEnter: function (to, from, next) {
+                if (!Auth.loggedIn()) {
+                    next({
+                        path: "/login",
+                        query: { redirect: to.fullPath }
+                    });
+                }
+                else {
+                    next();
+                }
+            }
         },
         {
             path: "/users/:userId",
             component: UserDetail
+        },
+        {
+            path: "/login",
+            component: Login
+        },
+        {
+            path: "/logout",
+            beforeEnter: function (to, from, next) {
+                Auth.logout();
+                next("/");
+            }
         }
     ]
 });

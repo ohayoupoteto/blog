@@ -15,10 +15,14 @@
 
 <body>
     <div id="app">
-        <router-link to="/top">トップページへ</router-link>
-        <router-link to="/users">ユーザー一覧へ</router-link>
-        <router-link to="/users/new">新規追加</router-link>
-        <router-view></router-view>
+        <nav>
+            <router-link to="/top">トップページへ</router-link>
+            <router-link to="/users">ユーザー一覧へ</router-link>
+            <router-link to="/users/new?redirect=true">新規追加</router-link>
+            <router-link to="/login" v-show="!Auth.loggedIn()">ログイン</router-link>
+            <router-link to="/logout" v-show="Auth.loggedIn()">ログアウト</router-link>
+            <router-view></router-view>
+        </nav>
     </div>
 
     <script type="text/x-template" id="user-list">
@@ -32,6 +36,7 @@
         </div>
     </div>
     </script>
+
     <script type="text/x-template" id="user-detail">
         <div>
             <div class=" loading " v-if="loading "読み込み中...></div>
@@ -42,6 +47,7 @@
             </div>
         </div>
         </script>
+
     <script type="text/x-template" id="user-create">
         <div>
             <div class="sending" v-if="sending">Sending...</div>
@@ -60,6 +66,21 @@
                     <input type="button" @click="createUser" value="送信">
                 </div>
             </div>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="login">
+        <div>
+            <h2>ログインだよ</h2>
+            <p v-if="$route.query.redirect">
+                ログインしてください
+            </p>
+            <form @submit.prevent="login">
+                <label><input type="text" v-model="email" placeholder="email"></label>
+                <label><input v-model="pass" placeholder="password"></label><br>
+                <button type="submit">ログイン</button>
+                <p v-if="error" class="error">ログインに失敗しました</p>
+            </form>
         </div>
     </script>
 
