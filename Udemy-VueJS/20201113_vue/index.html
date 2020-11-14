@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ブログ用</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{count}}</p>
+        <button @click="count+=1">プラス</button>
+        <p>{{lessThanThree}}</p>
+        <p :class="{red:isClass, 'bg-blue':!isClass}">内定欲しい</p>
+        <button @click="isClass= !isClass">クラス切り替え</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                count: 0,
+                isClass: false
+            },
+            computed: {
+                lessThanThree: function () {
+                    return this.count > 3 ? "3より上" : "3より下";
+                }
+            }
+        })
+    </script>
+    <script src="script.js "></script>
+</body>
+
+</html>
