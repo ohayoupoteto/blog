@@ -1,0 +1,14 @@
+.top-svg-animation {
+    max-width: 20%;
+}
+.close-eye{
+    animation: close-eye 2s ease 0s infinite;
+}
+@keyframes close-eye{
+    0%{
+        transform:translate(-469px,-224.3px);
+    }
+    100%{
+        transform:translate(-469px,-224.3px) rotate(45deg);
+    }
+}
