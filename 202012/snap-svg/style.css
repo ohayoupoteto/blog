@@ -1,0 +1,83 @@
+
+.top-svg-animation{
+    position:relative;
+    margin:0 auto;
+    text-align:center;
+    top:35%;
+    max-width:200px;
+    transform:translateX(-10px);
+    opacity:.9;
+}
+@media only screen and(max-width:480px){
+    .top-svg-animation{
+        max-width:140px;
+    }
+}
+.body-animation{
+    animation:humer-animation 1s ease-out 0s infinite;
+}
+@keyframes humer-animation{
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform: rotate3d(1, -1, 1, 30deg);
+        /*transform:rotate(50deg);*/
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+.star-svg-animation2{
+    position:absolute;
+    bottom:0em;
+    right:1em;
+}
+.star-svg-animation2:before{
+    position:absolute;
+    font-family: "Font Awesome 5 Free";
+    content:"\f005";
+    font-weight:bold;
+    bottom:1.3em;
+    left:1em;
+    width:100px;
+    height:100px;
+    color:yellow;
+    font-size:1.1em;
+    animation:star-svg-animation .9s ease 0s;
+    opacity:0;
+}
+.star-svg-animation2:after{
+    position:absolute;
+    font-family: "Font Awesome 5 Free";
+    content:"\f005";
+    font-weight:bold;
+    bottom:0em;
+    left:0em;
+    width:100px;
+    height:100px;
+    color:yellow;
+    font-size:.9em;
+    animation:star-svg-animation .9s ease 0s;
+    opacity:0;
+}
+@keyframes star-svg-animation{
+    0%{
+        transform:translate(-50px,60px);
+        opacity:.9;
+    }
+    100%{
+        opacity:0;
+    }
+}
+.svg-shadow{
+    animation:svg-shadow 5s ease 0s infinite;
+}
+@keyframes svg-shadow{
+    0%{
+        transform:rotateX(30deg);
+    }
+    100%{
+        transform:rotateX(330deg);
+    }
+}
