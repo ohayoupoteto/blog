@@ -1,5 +1,6 @@
 let rEye = Snap(".r-eye");
 let lEye = Snap(".l-eye");
+let mouse = Snap("#mouse");
 let lEyeParts1 = Snap(".l-eye-parts1");
 let lEyeParts2 = Snap(".l-eye-parts2");
 let lEyeParts3 = Snap(".l-eye-parts3");
@@ -12,6 +13,16 @@ let SPEED = 200; //動く速さ,
 let EASING = mina.easein; //snap.svgに用意されているeasing
 
 closeEye();
+closeMouse();
+function closeMouse() {
+    mouse.animate({ d: "M 15,0 L 0,0 0,0 15,-2 Z", transform: "translate(75 120)", fill: "#430e00" }, 200, EASING, openMouse);
+}
+function openMouse() {
+    mouse.animate({
+        d: "M557.8,338.6c-1.7-.9-3.6-.8-6.6-.3s-6.3,1.2-6.7,2c-1.2,2.5,3.2,8.8,8,8.5,2.9-.1,4.9-2.6,5.4-3.3s2.7-3.5,1.5-5.6A3.3,3.3,0,0,0,557.8,338.6Z"
+        , transform: "translate(-469 -224.3)", fill: "#de7d84", stroke: "#430e00", "stroke-miterlimit": "10", "stroke-width": "0.963779527559055px"
+    }, 300, EASING, closeMouse)
+}
 function closeEye() {
     setTimeout(() => {
         lEyeParts1.attr({
@@ -38,9 +49,9 @@ function closeEye() {
         rEyeParts4.attr({
             "opacity": "0"
         });
-        rEye.animate({ d: "M 0,0 L 25,4 25,4 0,4 Z", transform: "translate(90 94)" }, 50, EASING);
-        lEye.animate({ d: "M 0,0 L 25,-2 25,-4 0,-2 Z", transform: "translate(45 99)" }, 50, EASING, openEye);
-    }, 1000);
+        rEye.animate({ d: "M 0,0 L 25,4 25,4 0,4 Z", transform: "translate(90 94)" }, 30, EASING);
+        lEye.animate({ d: "M 0,0 L 25,-2 25,-4 0,-2 Z", transform: "translate(45 99)" }, 30, EASING, openEye);
+    }, 1150);
 }
 function openEye() {
     setTimeout(() => {

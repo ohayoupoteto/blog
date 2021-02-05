@@ -1,8 +1,37 @@
 .top-svg-animation {
     max-width: 20%;
+    margin:0 auto;
+}
+#kurumi-face{
+    animation:face-move 1.4s ease 0s infinite;
+}
+@keyframes face-move{
+    0%{
+        
+    }
+    60%{
+        transform:rotateY(3deg) rotateZ(1deg) rotateX(3deg);
+    }
+    100%{
+
+    }
+}
+#body-move{
+    animation:body-move 1.2s ease-out 0s infinite;
+}
+@keyframes body-move{
+    0%{
+        
+    }
+    50%{
+        transform:translateY(-1px) scaleX(1.01) rotateX(5deg) rotateZ(1deg) rotateY(1deg);
+    }
+    100%{
+        transform:translateY(0px);
+    }
 }
 .close-eye{
-    animation: close-eye 2s ease 0s infinite;
+    animation: close-eye 2s ease-in 0s infinite;
 }
 @keyframes close-eye{
     0%{
@@ -10,5 +39,27 @@
     }
     100%{
         transform:translate(-469px,-224.3px) rotate(45deg);
+    }
+}
+#l-arm{
+    animation: move-lArm 1.7s ease-in 0s infinite;
+}
+@keyframes move-lArm{
+    0%{
+
+    }
+    60%{
+        transform:rotateY(10deg);
+    }
+}
+#r-arm{
+    animation: move-rArm 1.4s ease 0s infinite;
+}
+@keyframes move-rArm{
+    0%{
+
+    }
+    60%{
+        transform:rotateY(10deg) rotateX(7deg);
     }
 }
