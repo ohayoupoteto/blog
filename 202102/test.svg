@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>記事冒頭くるみアニメーション</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
-</head>
-
-<body>
-    <svg id="article-top-kurumi" class="body-move" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163.1 215.3">
+<svg id="article-top-kurumi" class="body-move" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163.1 215.3">
         <g id="レイヤー_2" data-name="レイヤー 2">
             <path d="M567.1,403.8c-1.3,2.3-1,5-1,5.9s.5,4.6,3,7.1c5,5.2,16.5,3.3,19.2-2,1-1.8.9-4.1.8-6.4s-.3-4.9-1.5-6.6C584,396.7,570.4,397.5,567.1,403.8Z"
                 transform="translate(-469 -224.3)" style="fill:#ffebd4;stroke:#430e00;stroke-miterlimit:10;stroke-width:0.992125984251969px"
@@ -155,7 +141,7 @@
                     transform="translate(-469 -224.3)" style="fill:#8687a3;stroke:#4b180a;stroke-miterlimit:10;stroke-width:0.708661417322835px"
                 />
                 <path d="M587.7,361.1c-2.3-4.7-7.3-8.6-11.9-7.1-6.4,2.1-9.6,13.3-6.8,21.4,2.2,6,7.9,10.8,12.7,9.2C588.3,382.5,591.7,369.4,587.7,361.1Z"
-                    transform="translate(-469 -224.3)" style="fill:#8687a3;opacity:0.5" />
+                    transform="translate(-469 -224.3)" style="fill:#8687a3;opacity:0.5" />s
 
                 <path d="M571.5,364c-1.8.8-3.2,2.7-2.7,4.4s4.8,3.6,7.8,2.7,4.1-2.9,3.6-4.7S574.6,362.6,571.5,364Z" transform="translate(-469 -224.3)"
                     style="fill:#8687a3;opacity:0.9" />
@@ -164,11 +150,3 @@
             </g>
         </g>
     </svg>
-    <img src="test.svg" alt="">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="snap.svg-min.js"></script>
-
-    <script type="text/javascript" src="article-top-kurumi.js"></script>
-</body>
-
-</html>

@@ -1,30 +1,33 @@
-.top-svg-animation {
-    max-width: 20%;
+#article-top-kurumi {
+    max-width: 30%;
     margin:0 auto;
+    filter: drop-shadow(0 3px 5px silver) brightness(105%) opacity(92%);
+}
+/*WordPressではこっち*/
+.balloon1-pare #article-top-kurumi {
+    position: absolute;
+    width: 27%;
+    max-width: 150px;
+    filter: drop-shadow(0 3px 5px silver) brightness(105%) opacity(82%);
+    top: 40%;
+    left: 5%;
+    pointer-events: none;
+    user-select: none;
 }
 #kurumi-face{
     animation:face-move 1.4s ease 0s infinite;
 }
 @keyframes face-move{
-    0%{
-        
-    }
     60%{
         transform:rotateY(3deg) rotateZ(1deg) rotateX(3deg);
     }
-    100%{
-
-    }
 }
-#body-move{
+.body-move{
     animation:body-move 1.2s ease-out 0s infinite;
 }
 @keyframes body-move{
-    0%{
-        
-    }
     50%{
-        transform:translateY(-1px) scaleX(1.01) rotateX(5deg) rotateZ(1deg) rotateY(1deg);
+        transform:translateY(-1px) scaleX(1.01) rotateX(7deg) rotateZ(1deg) rotateY(1deg);
     }
     100%{
         transform:translateY(0px);
@@ -45,9 +48,6 @@
     animation: move-lArm 1.7s ease-in 0s infinite;
 }
 @keyframes move-lArm{
-    0%{
-
-    }
     60%{
         transform:rotateY(10deg);
     }
@@ -56,10 +56,7 @@
     animation: move-rArm 1.4s ease 0s infinite;
 }
 @keyframes move-rArm{
-    0%{
-
-    }
     60%{
-        transform:rotateY(10deg) rotateX(7deg);
+        transform:rotateY(24deg) rotateX(7deg);
     }
 }
