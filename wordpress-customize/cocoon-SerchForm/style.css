@@ -1,0 +1,8 @@
+input.searchform__input::placeholder {
+	color:#aaa;
+}
+input.searchform__input{
+border: none;
+border-bottom: solid 1px #efefef;
+box-shadow: 0 4px 4px rgb(0 0 0 / 2%), 0 2px 3px -2px rgb(0 0 0 / 5%);
+}
