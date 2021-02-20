@@ -30,10 +30,17 @@ endif;
 
 */
 
+//メインカラム幅を680pxにするサンプル
+if ( !function_exists( 'get_main_column_contents_width' ) ):
+  function get_main_column_contents_width(){
+    return 680;
+  }
+  endif;
+
 global $_THEME_OPTIONS;
 $_THEME_OPTIONS =
 array(
-  'entry_card_type' => 'entry_card',
+  'entry_card_type' => 'vertical_card_2',
   'entry_card_border_visible' => 0,
   'smartphone_entry_card_1_column' => 0,
   'entry_card_excerpt_max_length' => 60,
