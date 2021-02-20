@@ -1,6 +1,6 @@
 /*
   Skin Name: イノセント
-  Description: 春夏秋冬のような季節をモチーフにして優しさを感じられるデザインを目指して作成されたスキン。
+  Description: 居心地の良いスキン。
   Skin URI: https://ponhiro.com/season/
   Author: おはようポテト
   Author URI: https://pote-chil.com/
@@ -9,11 +9,86 @@
   Priority: 9870001000
 */
 /*以下にスタイルシートを記入してください*/
+
+/************************************
+** body
+************************************/
 body{
-    background-image: url("images/hougan_silver.png");
-    background-position: center top;
-    background-size: auto;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    color:#545454;
+  background-image: url("https://for-men.jp/wp-content/uploads/2018/08/bg.gif");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  color:#545454;
+}
+.main, .sidebar{
+  background-color: initial;
+}
+/************************************
+** ヘッダー
+************************************/
+header{
+  box-shadow: 0 2px 7px rgb(0 0 0 / 12%);
+}
+/************************************
+** サイドバーのウィジェット
+************************************/
+.widget-sidebar {
+  background-color: #fff;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 7%), 0 2px 3px -2px rgb(0 0 0 / 1%);
+}
+/************************************
+** インデックス
+************************************/
+.ect-vertical-card .entry-card-wrap{
+  max-width: 42%;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 23%);
+	background-color: #fff;
+  border-radius: 3px;
+  padding:0;
+}
+@media screen and (max-width:480px){
+  .ect-vertical-card .entry-card-wrap{
+      max-width: 46%;
+  }
+  .e-card-title {
+      font-size: 13px;
+  }
+}
+.entry-card-title{
+  color: #5a5a5a; /*見出しの色*/
+  line-height: 1.6;
+}
+.ect-vertical-card .entry-card-wrap .entry-card-content {
+  margin: 8px 12px 9px 12px;
+}
+.entry-card-meta, .related-entry-card-meta {
+  color: #b7b7b7;
+  margin: 4px 8px;
+}
+.entry-card-wrap .cat-label{
+  display: none; /*カテゴリを非表示に*/
+}
+.ect-vertical-card {
+  justify-content: space-around;
+}
+/************************************
+** 検索フォーム
+************************************/
+input.search-edit{
+  border: none;
+  border-bottom: solid 1px #efefef;
+}
+input.search-edit::placeholder {
+  color:#ddd;
+}
+button.search-submit{
+  border-bottom: solid 1px rgba(0,0,0,.1);
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  background-color: #ccc;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
 }
