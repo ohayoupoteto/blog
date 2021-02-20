@@ -1,0 +1,19 @@
+/*
+  Skin Name: イノセント
+  Description: 春夏秋冬のような季節をモチーフにして優しさを感じられるデザインを目指して作成されたスキン。
+  Skin URI: https://ponhiro.com/season/
+  Author: おはようポテト
+  Author URI: https://pote-chil.com/
+  Screenshot URI: https://im-cocoon.net/wp-content/uploads/skin-season-spring.png
+  Version: 1.0.0
+  Priority: 9870001000
+*/
+/*以下にスタイルシートを記入してください*/
+body{
+    background-image: url("images/hougan_silver.png");
+    background-position: center top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    color:#545454;
+}

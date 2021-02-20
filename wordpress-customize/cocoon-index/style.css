@@ -4,6 +4,14 @@
     border-radius: 3px;
     padding:0;
 }
+@media screen and (max-width:480px){
+    .ect-vertical-card .entry-card-wrap{
+        max-width: 46%;
+    }
+    .e-card-title {
+        font-size: 13px;
+    }
+}
 .entry-card-title{
     color: #5a5a5a; /*見出しの色*/
     line-height: 1.6;
