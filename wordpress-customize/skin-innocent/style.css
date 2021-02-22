@@ -1,6 +1,6 @@
 /*
   Skin Name: イノセント
-  Description: 落ち着いたデザインで"大人可愛い"を実現した居心地の良いスキン。
+  Description: 「大人可愛いさ」と「知的さ」を両立した居心地の良いスキン。
   Skin URI: https://ponhiro.com/season/
   Author: おはようポテト
   Author URI: https://pote-chil.com/
@@ -150,6 +150,100 @@ body{
 	color:#5a5a5a;
 }
 /************************************
+** 見出しh2
+************************************/
+.article h2 {
+  padding: 22px 20px 18px;
+  background: #f2f2f2;
+  border-left: solid 5px #777;
+  border-bottom: solid 3px #d7d7d7;
+	font-size:21px;
+}
+/************************************
+** 見出しh3
+************************************/
+.article h3 {
+    position: relative;
+    background: #f2f2f2;
+    padding: 10px 4px 10px 39px;
+    font-size:19px;
+    border-radius:10px;
+	margin: 3em 0 1.5em;
+	border:none;
+  }
+.article h3:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    display: inline-block;
+    position: absolute;
+    padding: 0;
+    color: #fff;
+    background: #777;
+    font-weight: 900;
+    width: 43px;
+	    height: 43px;
+    text-align: center;
+    line-height: 43px;
+	   top: 50%;
+    left: -0.4em;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.29);
+  }
+@media screen and (max-width:480px){
+	.article h3 {
+    font-size:18px;
+  }
+}
+/************************************
+** 見出しh4
+************************************/
+.article h4 {
+    position: relative;
+    padding-left: 25px;
+    border:none;
+    font-size:18px;
+		margin-bottom:1.3em;
+		margin-top:2.4em;
+		width:95%;
+  }
+.article h4:before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px #777;
+  }
+.article h4:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px #777;
+  }
+@media screen and (max-width:480px){
+	.article h4 {
+    font-size:17px;
+  }
+}
+/************************************
+** 見出しh5
+************************************/
+.article h5 {
+    font-size:18px;
+  }
+@media screen and (max-width:480px){
+	.article h5 {
+    font-size:17px;
+  }
+}
+/************************************
 ** 記事下シェアボタン
 ************************************/
 .sns-share-buttons {
@@ -266,6 +360,29 @@ button.search-submit{
   height: 50px;
   top: 0;
   right: 0;
+}
+/************************************
+** コメント欄
+************************************/
+button#comment-reply-btn {
+    background-color: #777;
+    color: #fff;
+    font-size: .95em;
+    border-radius: 50px;
+    width: 70%;
+    margin: 0 auto;
+}
+.comment-form .form-submit input{
+	background-color: #777;
+    color: #fff;
+    font-size: .9em;
+    border-radius: 50px;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%), 0 2px 3px -2px rgb(0 0 0 / 15%);
+}
+.form-submit{
+	text-align:center;
 }
 /************************************
 ** メインカラムのアニメーション
