@@ -1,6 +1,6 @@
 /*
   Skin Name: イノセント
-  Description: 居心地の良いスキン。
+  Description: 落ち着いたデザインで"大人可愛い"を実現した居心地の良いスキン。
   Skin URI: https://ponhiro.com/season/
   Author: おはようポテト
   Author URI: https://pote-chil.com/
@@ -19,7 +19,7 @@ body{
   background-size: auto;
   background-repeat: repeat;
   background-attachment: scroll;
-  color:#595959;
+  color:#5a5a5a;
 }
 .home .main, .sidebar{
   background-color: initial;
@@ -79,9 +79,46 @@ body{
   justify-content: space-around;
 }
 /************************************
+** パンくずリスト
+************************************/
+.breadcrumb {
+    color: #1e92bf;
+}
+.breadcrumb div {
+    letter-spacing: .1em;
+}
+.breadcrumb a{
+    color: #1e92bf;
+}
+/************************************
+** 投稿日・更新日
+************************************/
+.entry-date{
+	color: #ccc;
+    font-size: 1.2em;
+    letter-spacing: .05em;
+}
+.date-tags {
+    text-align: left;
+	margin-top:20px;
+}
+.article .post-date .fa,.post-update .fa{
+	width: 31px;
+    height: 31px;
+    background-color: #777;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.7;
+}
+ .cat-label{
+	display:none;
+}
+/************************************
 ** 記事内目次
 ************************************/
-.toc {
+.article .toc {
 	    width: 53%;
     min-width: 250px;
     max-width: 370px;
@@ -91,12 +128,12 @@ body{
 	border-top: 5px solid #777;
     border-radius: 10px;
 }
-.toc-title{
+.article .toc-title{
 	font-weight:bold;
 	letter-spacing:.05em;
 	font-size: 1.25em;
 }
-.toc-title:before {
+.article .toc-title:before {
     display: inline-block;
     width: 45px;
     height: 45px;
@@ -109,28 +146,107 @@ body{
 	line-height: 2.3;
     margin-right: 5px;
 }
+.article .toc a{
+	color:#5a5a5a;
+}
+/************************************
+** 記事下シェアボタン
+************************************/
+.sns-share-buttons {
+    justify-content: space-evenly;
+}
+.sns-share-buttons a {
+	font-size: 1.25em;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	opacity:.6;
+}
+@media screen and (max-width:480px){
+.ss-bottom .sns-share-buttons a {
+	font-size: 1.3em;
+}
+}
+.sns-share-buttons a .button-caption {
+    display: none;
+}
+.sns-share-message{
+    color: #bbb;
+	margin-bottom:20px;
+}
+
 /************************************
 ** サイドバーのウィジェット
 ************************************/
-.widget-sidebar {
+.sidebar:not(#slide-in-sidebar) .widget-sidebar {
   background-color: #fff;
-  box-shadow: 0 3px 3px rgb(0 0 0 / 10%), 0 2px 3px -2px rgb(0 0 0 / 1%);
+  box-shadow: 0 3px 3px rgb(0 0 0 / 12%), 0 2px 3px -2px rgb(0 0 0 / 1%);
 	border-radius:3px;
+}
+.widget-sidebar > div {
+    padding: 0 .5em .4em .5em;
 }
 .sidebar h3 {
     color: #fff;
     background-color: #777;
     padding: 8px 12px;
-    font-size: 1.1em;
+    font-size: 1.02em;
     letter-spacing: .05em;
     font-weight: normal;
 }
 /************************************
 ** プロフィールBOX
 ************************************/
+.widget_author_box{
+	width:90%;
+	margin:0 auto;
+}
 .author-box {
     border: none;
+	  background-color: #f5f5f5;
 }
+.author-box .author-name a{
+    text-decoration: none;
+    color: #777;
+}
+.author-thumb img{
+	border:3px solid #fff;
+}
+.nwa .author-box {
+    padding: 10px 0 0;
+}
+.nwa .author-box .author-thumb {
+	position: relative;
+	margin-top:17px;
+    z-index: 1;
+}
+.author-thumb:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 24px);
+    height: 200px;
+    height: calc(100% + 18px);
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-12px, -12px);
+    z-index: -1;
+}
+.nwa .author-box .author-content {
+	padding: .8em;
+}
+.author-description{
+		padding: .3em;
+}
+.author-description p{
+	color:#777;
+	line-height:1.8;
+}
+@media screen and (min-width:481px){
+	.author-description p{
+	font-size:.87em;
+}
+}
+
 /************************************
 ** 検索フォーム
 ************************************/
@@ -150,4 +266,25 @@ button.search-submit{
   height: 50px;
   top: 0;
   right: 0;
+}
+/************************************
+** メインカラムのアニメーション
+************************************/
+#footer{
+	background-color:#e7e7e7;
+}
+/************************************
+** メインカラムのアニメーション
+************************************/
+#main{
+	animation: mainFade .9s ease-in 0s 1 normal;
+}
+@keyframes mainFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
