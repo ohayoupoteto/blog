@@ -1,0 +1,43 @@
+.top-svg-animation {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    top: 30%;
+    opacity: .85;
+    max-width: 21.4em;
+}
+
+.humer-body {
+    animation: body-animation 1s ease-out 0s infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes body-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(17deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.humer {
+    animation: humer-animation 0.5s ease-out 0s infinite;
+}
+
+@keyframes humer-animation {
+    10% {
+        transform: rotate(100deg);
+        opacity: .5;
+        transform-origin: 26% 25%;
+    }
+    100% {
+        transform: rotate(200deg) translate(-50px, -0px);
+        transform-origin: 26% 30%;
+    }
+}
+
+/*ここから本題*/
