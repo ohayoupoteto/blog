@@ -8,18 +8,18 @@
 }
 
 .humer-body {
-    animation: body-animation 1s ease-out 0s infinite;
+    animation: body-animation 1.3s ease-in -0.3s infinite;
     transform-origin: center bottom;
 }
 
 @keyframes body-animation {
-    0% {
+    45% {
         transform: rotate(0deg);
     }
-    50% {
-        transform: rotate(8deg);
+    60% {
+        transform: rotate(7deg);
     }
-    100% {
+    95% {
         transform: rotate(0deg);
     }
 }
@@ -27,7 +27,7 @@
 /*ここから本題*/
 
 .humer {
-    animation: humer-animation 1s ease-out 0s infinite;
+    animation: humer-animation 1.3s ease-in -0.3s infinite;
 }
 
 @keyframes humer-animation {
@@ -38,19 +38,23 @@
     }
     50% {
         transform: rotate(100deg);
-        opacity: .8;
+        opacity: .9;
         transform-origin: 26% 25%;
+    }
+    60% {
+        transform: rotate(190deg) translate(-40px, -0px);
+        transform-origin: 26% 30%;
     }
     70% {
         transform: rotate(190deg) translate(-40px, -0px);
         transform-origin: 26% 30%;
     }
-    90% {
+    85% {
         transform: rotate(100deg);
-        opacity: .8;
+        opacity: .9;
         transform-origin: 26% 25%;
     }
-    99% {
+    97% {
         transform: rotate(0deg);
         opacity: 1;
         transform-origin: center;
@@ -58,34 +62,131 @@
 }
 
 .l-arm {
-    animation: l-arm-animation .8s ease-out 0s infinite;
+    animation: l-arm-animation 1.3s ease-in -0.3s infinite;
     transform-origin: 38% 55%;
+    transform: rotate(0deg) translate(-60px, -80px);
 }
 
 @keyframes l-arm-animation {
-    65% {
+    49% {
+        transform: rotate(0deg) translate(-60px, -80px);
         opacity: 1;
     }
-    66% {
+    57% {
         opacity: 0;
     }
-    100% {
-        transform: rotate(170deg) translate(-40px, 0px);
+    60% {
+        transform: rotate(160deg) translate(20px, 40px) scale(1.1);
         opacity: 0;
+    }
+    70% {
+        transform: rotate(160deg) translate(20px, 40px) scale(1.1);
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    97% {
+        transform: rotate(0deg) translate(-60px, -80px);
     }
 }
 
-.arm {
-    animation: arm-animtion 0.52s ease-out 0s infinite;
-    transform-origin: 26% 30%;
+.r-arm {
+    animation: r-arm-animation 1.3s ease-in -0.3s infinite;
+    transform-origin: 38% 55%;
+    transform: rotate(0deg) translate(-60px, -80px);
 }
 
-@keyframes arm-animation {
-    15% {
+@keyframes r-arm-animation {
+    49% {
+        transform: rotate(0deg) translate(-60px, -80px);
         opacity: 1;
     }
+    57% {
+        opacity: 0;
+    }
+    60% {
+        transform: rotate(-70deg) translate(-70px, 0px) scale(1.1);
+        opacity: 0;
+    }
+    70% {
+        transform: rotate(-70deg) translate(-70px, 0px) scale(1.1);
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    97% {
+        transform: rotate(0deg) translate(-60px, -80px);
+    }
+}
+
+.humer-shadow {
+    animation: shadow-animation 1.3s ease-in -0.3s infinite;
+}
+
+@keyframes shadow-animation {
+    45% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(14px);
+    }
+    95% {
+        transform: translateX(0);
+    }
+}
+
+/*--------------------------------------
+星
+--------------------------------------*/
+
+.star-svg-animation {
+    position: absolute;
+    bottom: 1.1em;
+    right: 7.9em;
+}
+
+.star-svg-animation:before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    content: "\f005";
+    font-weight: bold;
+    bottom: 1.3em;
+    left: 1em;
+    width: 100px;
+    height: 100px;
+    color: yellow;
+    font-size: 1.1em;
+    animation: star-svg-animation 1.3s ease-in -0.3s infinite;
+    opacity: 0;
+}
+
+.star-svg-animation:after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    content: "\f005";
+    font-weight: bold;
+    bottom: 0em;
+    left: 0em;
+    width: 100px;
+    height: 100px;
+    color: yellow;
+    font-size: .9em;
+    animation: star-svg-animation 1.3s ease-in -0.3s infinite;
+    opacity: 0;
+}
+
+@keyframes star-svg-animation {
+    59% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    60% {
+        transform: translate(-50px, 60px);
+        opacity: .95;
+    }
     100% {
-        transform: rotate(100deg) translate(-40px, -0px);
-        opacity: 0
+        opacity: 0;
     }
 }

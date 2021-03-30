@@ -1,0 +1,354 @@
+svg[class^="fukidasi_kurumi"] {
+    filter: drop-shadow(0 3px 5px silver) brightness(105%) opacity(92%);
+}
+
+.kurumi-face {
+    animation: face-move 1.4s ease 0s infinite;
+}
+
+@keyframes face-move {
+    60% {
+        transform: rotateY(3deg) rotateZ(1deg) rotateX(3deg);
+    }
+}
+
+.body-move {
+    animation: body-move 1.2s ease-out 0s infinite;
+}
+
+@keyframes body-move {
+    50% {
+        transform: translateY(-1px) scaleX(1.01) rotateX(3deg) rotateZ(1deg) rotateY(1deg);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.fukidasi_kurumi_smile .l-arm {
+    animation: move-lArm 1.7s ease-in 0s infinite;
+}
+
+@keyframes move-lArm {
+    60% {
+        transform: rotateY(10deg);
+    }
+}
+
+.fukidasi_kurumi_smile .r-arm {
+    animation: move-rArm 1.4s ease 0s infinite;
+}
+
+@keyframes move-rArm {
+    60% {
+        transform: rotateY(24deg) rotateX(7deg);
+    }
+}
+
+/*-----笑顔-----*/
+
+.fukidasi_kurumi_smile .r-eye, .fukidasi_kurumi_smile .l-eye, .kurumi_worry .r-eye, .kurumi_worry .l-eye {
+    animation: eye-move_smile 1.5s ease 0s infinite;
+}
+
+.fukidasi_kurumi_smile .l-eye, .kurumi_worry .l-eye {
+    transform-origin: 37% 49%;
+}
+
+.fukidasi_kurumi_smile .r-eye, .kurumi_worry .r-eye {
+    transform-origin: 63% 48%;
+}
+
+@keyframes eye-move_smile {
+    0% {
+        transform: scale(.1);
+    }
+    10% {
+        transform: scale(1);
+    }
+}
+
+.fukidasi_kurumi_smile .mouse {
+    animation: mouse-move_smile 1.1s ease 0s infinite;
+    transform-origin: 50% 55%;
+}
+
+@keyframes mouse-move_smile {
+    0% {
+        transform: scale(.1);
+    }
+    10% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.1);
+    }
+    35% {
+        transform: scale(1);
+    }
+    7% {
+        transform: scale(.1);
+    }
+    80% {
+        transform: scale(1);
+    }
+}
+
+/*-----キラキラ-----*/
+
+.fukidasi_kurumi_kira .r-eye, .fukidasi_kurumi_kira .l-eye {
+    animation: eye-move_kira 1.5s ease 0s infinite;
+}
+
+.fukidasi_kurumi_kira .l-eye {
+    transform-origin: 30% 44%;
+}
+
+.fukidasi_kurumi_kira .r-eye {
+    transform-origin: 53% 43%;
+}
+
+@keyframes eye-move_kira {
+    0% {
+        transform: scale(.1);
+    }
+    10% {
+        transform: scale(1);
+    }
+}
+
+.fukidasi_kurumi_kira .mouse {
+    animation: mouse-move_kira 1.2s ease 0s infinite;
+    transform-origin: 42% 52%;
+}
+
+@keyframes mouse-move_kira {
+    0% {
+        transform: scale(.1);
+    }
+    10% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.1);
+    }
+    35% {
+        transform: scale(1);
+    }
+    7% {
+        transform: scale(.1);
+    }
+    80% {
+        transform: scale(1);
+    }
+}
+
+.l-kira-effect {
+    animation: l-kira-effect 1.2s ease 0s infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes l-kira-effect {
+    0% {
+        opacity: .1;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.r-kira-effect {
+    animation: r-kira-effect 1.2s ease 0s infinite;
+}
+
+@keyframes r-kira-effect {
+    0% {
+        opacity: .1;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/*-----泣く-----*/
+
+.fukidasi_kurumi_cry .r-arm {
+    animation: move-lArm 2s ease-in 0s infinite;
+}
+
+.fukidasi_kurumi_cry .l-arm {
+    animation: move-lArm 2s ease 0s infinite;
+}
+
+.fukidasi_kurumi_cry .mouse {
+    animation: mouse-move_cry 1.5s ease 0s infinite;
+    transform-origin: 50% 55%;
+}
+
+@keyframes mouse-move_cry {
+    0% {
+        transform: scale(.7);
+    }
+    10% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.7);
+    }
+    35% {
+        transform: scale(1);
+    }
+    7% {
+        transform: scale(.7);
+    }
+    80% {
+        transform: scale(1);
+    }
+}
+
+.fukidasi_kurumi_cry .tears {
+    animation: tears .7s ease 0s infinite;
+}
+
+@keyframes tears {
+    50% {
+        transform: rotateX(10deg) rotateZ(1deg);
+        opacity: .8;
+    }
+}
+
+.fukidasi_kurumi_kira {
+    min-width: calc(100% + 11px);
+}
+
+.say.kira {
+    width: calc(100% + 20px);
+    padding-right: 20px;
+}
+
+.say.kira .faceicon {
+    padding-left: 14px;
+}
+
+/*-----悩む-----*/
+
+svg.kurumi_worry {
+    filter: drop-shadow(0 3px 5px silver) brightness(105%) opacity(85%);
+    position: absolute;
+    top: 58%;
+    left: 6.5%;
+    width: 22%;
+    max-width: 140px;
+}
+
+@media screen and (max-width:480px) {
+    svg.kurumi_worry {
+        width: 27%;
+        left: 5%;
+    }
+}
+
+.kurumi_worry .kurumi-face {
+    animation: face-move-worry 1.4s ease 0s infinite;
+}
+
+@keyframes face-move-worry {
+    60% {
+        transform: rotateY(3deg) rotateZ(1deg) rotateX(-3deg) translate(3px, 0px);
+    }
+}
+
+.kurumi_worry .r-eye, .kurumi_worry .l-eye {
+    animation: eye-move_smile 1.3s ease 0s infinite;
+}
+
+.kurumi_worry .l-arm, .kurumi_worry .r-arm {
+    animation: moveArmWorry 1.6s ease-out 0s infinite;
+}
+
+@keyframes moveArmWorry {
+    70% {
+        transform: rotateY(2deg) rotateX(6deg);
+    }
+}
+
+/*-----焦る-----*/
+
+.fukidasi_kurumi_ase .kurumi-face {
+    animation: face-move-ase 1.4s ease 0s infinite;
+}
+
+@keyframes face-move-ase {
+    60% {
+        transform: rotateX(1deg) rotateY(1deg) rotateZ(1deg);
+    }
+}
+
+.fukidasi_kurumi_ase .r-eye, .fukidasi_kurumi_ase .l-eye {
+    animation: eye-move_smile 1.5s ease 0s infinite;
+}
+
+.fukidasi_kurumi_ase .l-eye {
+    transform-origin: 30% 45%;
+}
+
+.fukidasi_kurumi_ase .r-eye {
+    transform-origin: 49% 44%;
+}
+
+.fukidasi_kurumi_ase .mouse {
+    animation: mouse-move_smile 1.2s ease 0s infinite;
+    transform-origin: 40% 52%;
+}
+
+.fukidasi_kurumi_ase .l-arm {
+    animation: move-lArm 1.4s ease 0s infinite;
+}
+
+@keyframes move-lArm {
+    60% {
+        transform: rotateX(5deg) rotateY(5deg) rotateZ(0.5deg);
+    }
+}
+
+.fukidasi_kurumi_ase .r-arm {
+    animation: move-rArm 1.4s ease 0s infinite;
+}
+
+@keyframes move-rArm {
+    60% {
+        transform: rotateX(5deg) rotateY(5deg) rotateZ(0.5deg);
+    }
+}
+
+.fukidasi_kurumi_ase .r-ase-effect {
+    animation: r-ase-effect .7s ease-out 0s infinite;
+}
+
+@keyframes r-ase-effect {
+    100% {
+        transform: translate(25px, -20px);
+        opacity: 0;
+    }
+}
+
+.fukidasi_kurumi_ase .l-ase-effect {
+    animation: l-ase-effect .7s ease-out 0s infinite;
+}
+
+@keyframes l-ase-effect {
+    100% {
+        transform: translate(-25px, -10px);
+        opacity: 0;
+    }
+}
